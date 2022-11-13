@@ -204,7 +204,7 @@ a{
 }
 @media screen and (max-width: 575px){
     .container{
-        width: 900%;
+        width: 90%;
     }
     #nav_logo{
         width: 86%;
