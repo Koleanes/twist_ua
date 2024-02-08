@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Language Learning School</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+    /* Скрыть модальное окно по умолчанию */
+    .hidden {
+        display: none;
+    }
+</style>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const showModal = (title, body) => {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-body').innerText = body;
+            document.getElementById('modal').classList.remove('hidden');
+        };
+    
+        document.getElementById('modal-close').addEventListener('click', function() {
+            document.getElementById('modal').classList.add('hidden');
+        });
+    
+        const startNowButtons = document.querySelectorAll('button[start-now]');
+        startNowButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                showModal("Notice", "Teachers are all on vacation, sign up for classes will be coming soon.");
+            });
+        });
+    
+        const learnMoreButtons = document.querySelectorAll('button[learn-more]');
+        learnMoreButtons.forEach((button, index) => {
+            button.addEventListener('click', function() {
+                const titles = ["Beginner English", "Business English", "English Pronunciation"];
+                const descriptions = [
+                    "Start with the basics of conversational English. Learn fundamental vocabulary and essential language structure.",
+                    "Tailored for the professional environment. Improve your fluency in professional settings.",
+                    "Focus on improving your accent through intensive pronunciation exercises."
+                ];
+                showModal(titles[index], descriptions[index]);
+            });
+        });
+    });
+    </script>
+    
+    
+
+<body class="bg-gradient-to-r from-light-blue-500 to-white">
+    <header class="text-center p-6 bg-blue-500 text-white">
+        <h1 class="text-8xl font-bold">Leauart Learning English</h1>
+        <p class="mt-3 text-lg">Welcome to our English language school! Our mission is to make learning English accessible, fun, and effective for everyone. Here you will find courses specifically designed to improve your reading, writing, speaking, and listening skills. <strong>Start now</strong> to discover the world of possibilities that English has to offer!</p>
+        <button class="mt-4 py-3 px-6 rounded-full bg-gradient-to-r from-blue-700 to-blue-500 hover:from-blue-800 hover:to-blue-600 focus:outline-none shadow-lg transform active:scale-95 transition-transform text-lg" start-now>Start Now</button>
+    </header>
+    
+    <!-- Benefits Section Updated -->
+    <section class="container mx-auto my-12">
+        <div class="grid md:grid-cols-4 gap-4">
+            <div class="p-6 text-center">
+                <h2 class="text-xl font-semibold">Individualized approach</h2>
+                <p class="text-md">We offer learning programs tailored to your unique needs and goals.</p>
+            </div>
+            <div class="p-6 text-center">
+                <h2 class="text-xl font-semibold">Qualified teachers</h2>
+                <p class="text-md">Our teachers are true experts in teaching English.</p>
+            </div>
+            <div class="p-6 text-center">
+                <h2 class="text-xl font-semibold">Flexible Schedule</h2>
+                <p class="text-md">Courses are available at any time so you can learn at your own pace.</p>
+            </div>
+            <div class="p-6 text-center">
+                <h2 class="text-xl font-semibold">Affordability</h2>
+                <p class="text-md">We offer competitive prices and special offers to make learning affordable for everyone.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Testimonials Updated -->
+    <section class="container mx-auto my-12">
+        <h2 class="text-center text-4xl font-bold mb-8">Student Testimonials and Success</h2>
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="shadow-lg rounded-lg p-4">
+                <img class="w-20 h-20 rounded-full mx-auto" src="https://cdn.discordapp.com/attachments/1152227094164680764/1205207771730149457/telegram-cloud-photo-size-2-5343561154930267465-x.jpg?ex=65d78834&is=65c51334&hm=e0e0cbf9efa2a4c81d9d445f9c77137bd91722f1e3ebfaa1156bef5ebbc241f5&" alt="Student Photo">
+                <blockquote class="italic text-center mt-4">"Thanks to Leauart, I've seen tremendous improvement in my communication skills!"</blockquote>
+                <p class="text-center mt-4">- Emily R.</p>
+            </div>
+            <div class="shadow-lg rounded-lg p-4">
+                <img class="w-20 h-20 rounded-full mx-auto" src="https://cdn.discordapp.com/attachments/1152227094164680764/1205207771449135136/telegram-cloud-photo-size-2-5343561154930267466-x.jpg?ex=65d78834&is=65c51334&hm=5bd7f07cbd4d38bf175d812077c646673a500443549307f0180e8bc05c53b1dc&" alt="Student Photo">
+                <blockquote class="italic text-center mt-4">"The flexible schedule allowed me to learn at my own pace, fitting perfectly into my busy lifestyle."</blockquote>
+                <p class="text-center mt-4">- Marcus B.</p>
+            </div>
+            <div class="shadow-lg rounded-lg p-4">
+                <img class="w-20 h-20 rounded-full mx-auto" src="https://cdn.discordapp.com/attachments/1152227094164680764/1205207772011036803/telegram-cloud-photo-size-2-5343561154930267464-x.jpg?ex=65d78834&is=65c51334&hm=f57c123e5cfe38cf95727e3038c917fb33fa54d55f266d91c3e280049a6b527a&" alt="Student Photo">
+                <blockquote class="italic text-center mt-4">"I never thought learning English online could be so interactive and fun!"</blockquote>
+                <p class="text-center mt-4">- Li Wei Z.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Courses Updated -->
+    <section class="container mx-auto my-12">
+        <h2 class="text-center text-4xl font-bold mb-8">Popular Courses</h2>
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="shadow-lg rounded-lg p-4 text-center">
+                <h3 class="text-xl font-semibold">Beginner English</h3>
+                <p class="mt-2">Learn the basics of English for everyday conversation.</p>
+                <button class="mt-4 py-2 px-4 rounded bg-blue-500 text-white hover:bg-blue-600" learn-more>Learn More</button>
+            </div>
+            <div class="shadow-lg rounded-lg p-4 text-center">
+                <h3 class="text-xl font-semibold">Business English</h3>
+                <p class="mt-2">Master English for professional settings and advance your career.</p>
+                <button class="mt-4 py-2 px-4 rounded bg-blue-500 text-white hover:bg-blue-600" learn-more>Learn More</button>
+            </div>
+            <div class="shadow-lg rounded-lg p-4 text-center">
+                <h3 class="text-xl font-semibold">English Pronunciation</h3>
+                <p class="mt-2">Improve your accent and speak English more clearly.</p>
+                <button class="mt-4 py-2 px-4 rounded bg-blue-500 text-white hover:bg-blue-600" learn-more>Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Updated -->
+    <div class="text-center my-16">
+        <h2 class="text-4xl font-bold mb-4">Ready to Learn English?</h2>
+        <button class="py-3 px-6 rounded-full bg-blue-500 text-white hover:bg-blue-600 text-lg" start-now>Start Learning Now</button>
+    </div>
+
+    <!-- The rest of the sections remain unchanged -->
+
+    <footer class="bg-blue-500 text-white text-center p-4">
+        <p>Leauart Learning English. All rights reserved. Anna Kuchugurna 2024</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Scripts for interactivity like form submission and course detail expansion
+    </script>
+
+<!-- Модальное окно -->
+<div id="modal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" id="my-modal">
+    <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <div class="mt-3 text-center">
+            <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">Modal Title</h3>
+            <div class="mt-2 px-7 py-3">
+                <p class="text-sm text-gray-500" id="modal-body">Your modal body text goes here.</p>
+            </div>
+            <div class="items-center px-4 py-3">
+                <button id="modal-close" class="px-4 py-2 bg-blue-500 text-white text-base font-medium rounded-md w-auto shadow-sm hover:bg-blue-700">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
